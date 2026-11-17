@@ -1,0 +1,53 @@
+{
+  "slug": "franklin_expedition",
+  "seed": 7707,
+  "title": "سفينتان و129 رجلاً اختفوا في الجليد... ووُجدت السفن بعد 170 عاماً! 😱",
+  "description": "في عام 1845 أبحرت أقوى حملة استكشاف بريطانية نحو القطب الشمالي... ولم يعد منها رجل واحد. وبعد أكثر من 160 عاماً، عثر الباحثون على السفينتين في قاع المحيط المتجمد بفضل قصص شعب الإنويت. فماذا حدث لحملة فرانكلين؟\n\n🔔 اشترك في الأرشيف المفقود وفعّل الجرس.\n💬 ما أكثر جزء صدمك في القصة؟\n\n#حملة_فرانكلين #القطب_الشمالي #وثائقي #غموض #قصص_حقيقية #الأرشيف_المفقود",
+  "tags": ["حملة فرانكلين", "إيريبوس", "تيرور", "القطب الشمالي", "الممر الشمالي الغربي", "وثائقي", "غموض", "الأرشيف المفقود", "Franklin expedition"],
+  "thumbnail": {
+    "image": "two old wooden 19th century ships trapped in massive Arctic ice under a dark sky with aurora, frozen sailors silhouettes, desolate",
+    "lines": ["129 رجلاً اختفوا!", "وُجدوا بعد 170 عاماً"],
+    "arrow": [[380, 640], [560, 480]]
+  },
+  "scenes": [
+    {"text": "في مايو عام ألف وثمانمئة وخمسة وأربعين، أبحرت من إنجلترا سفينتان من أقوى سفن العالم، وعلى متنهما مئة وتسعة وعشرون رجلاً. المهمة: اكتشاف طريق بحري عبر جليد القطب الشمالي. ولم يعد منهم أحد.",
+     "image": "two 19th century British exploration ships departing an English harbor, crowds waving, 1845, cinematic"},
+    {"text": "أهلاً بكم في الأرشيف المفقود. وملف اليوم، عن أكبر كارثة في تاريخ استكشاف القطب الشمالي: حملة فرانكلين المفقودة.",
+     "image": "an ancient dusty archive room full of old scrolls and leather books, single candle light, secret files"},
+    {"text": "قاد الحملة السير جون فرانكلين، مستكشف خبير. وكانت السفينتان، إيريبوس وتيرور، مزودتين بمحركات بخارية، وتدفئة، وطعام يكفي ثلاث سنوات.",
+     "image": "a distinguished British naval officer in 1840s uniform on the deck of a wooden ship, confident, ice in distance"},
+    {"text": "في يوليو من نفس العام، شاهدهما صيادو حيتان قرب جرينلاند للمرة الأخيرة. ثم دخلت السفينتان المتاهة الجليدية، واختفتا.",
+     "image": "two ships sailing into a maze of icebergs at dusk, whaling ship in foreground, last sighting"},
+    {"text": "مرت سنوات دون أي خبر. فأرسلت بريطانيا عشرات حملات البحث. وفي جزيرة صغيرة، وُجدت ثلاثة قبور لبحارة من الحملة، ماتوا في الشتاء الأول.",
+     "image": "three lonely wooden grave markers on a barren frozen Arctic island, grey sky, wind"},
+    {"text": "ثم عُثر على رسالة مخبأة تحت كومة من الحجارة. تقول إن فرانكلين مات في يونيو عام ألف وثمانمئة وسبعة وأربعين، وإن السفينتين حُوصرتا في الجليد لأكثر من عام ونصف.",
+     "image": "a rolled old paper note being pulled from a stone cairn in the Arctic, gloved hands, dramatic"},
+    {"text": "وفي أبريل عام ألف وثمانمئة وثمانية وأربعين، قرر من بقي من الرجال ترك السفينتين، والسير على الجليد نحو الجنوب. سار أكثر من مئة رجل منهك في أقسى بيئة على الأرض.",
+     "image": "a line of exhausted 19th century sailors dragging heavy sledges across endless Arctic ice, blizzard"},
+    {"text": "وكشف المستكشف جون راي، من شهادات شعب الإنويت، أن الرجال ماتوا واحداً تلو الآخر. وأن بعضهم، في يأسه الأخير، اضطر لأكل لحوم رفاقه. خبر صدم بريطانيا كلها، ورفض كثيرون تصديقه.",
+     "image": "Inuit hunters in fur clothing telling a story to a Victorian explorer inside a snow house, oil lamp light"},
+    {"text": "وفي الثمانينيات، فحص العلماء جثث البحارة المحفوظة في الجليد، فوجدوا نسباً عالية من الرصاص. ربما من علب الطعام أو من نظام المياه في السفن، وقد يكون أضعف أجسادهم وعقولهم.",
+     "image": "scientists in a cold tent examining old food tins with lead solder, forensic lab, Arctic"},
+    {"text": "لكن السؤال الأكبر بقي لأكثر من مئة وستين عاماً: أين السفينتان؟",
+     "image": "a vast frozen Arctic sea under the northern lights, empty and silent"},
+    {"text": "في عام ألفين وأربعة عشر، عثر فريق كندي على سفينة إيريبوس في قاع البحر. وبعد عامين، قادهم صياد من الإنويت إلى خليج يحمل اسم تيرور، فوجدوا السفينة الثانية، محفوظة بشكل مذهل.",
+     "image": "an underwater view of an old wooden shipwreck preserved on the Arctic seabed, divers with lights"},
+    {"text": "الإنويت كانوا يعرفون الحقيقة طوال الوقت. لكن لم يستمع إليهم أحد. برأيك، ما أكثر شيء صدمك في هذه القصة؟ اكتب في التعليقات، ولا تنسَ الاشتراك في الأرشيف المفقود. لأن الملف القادم، أغرب.",
+     "image": "a ship's bell resting on the dark Arctic seabed in a diver's light beam, mysterious ending"}
+  ],
+  "shorts": [
+    {
+      "title": "129 رجلاً اختفوا في جليد القطب الشمالي! 😱 #حملة_فرانكلين #وثائقي #غموض",
+      "scenes": [
+        {"text": "سفينتان ومئة وتسعة وعشرون رجلاً، دخلوا جليد القطب الشمالي، ولم يعد منهم أحد!",
+         "image": "two old ships trapped in Arctic ice under aurora, vertical portrait"},
+        {"text": "وكشف شعب الإنويت أن الرجال ماتوا واحداً تلو الآخر، وهم يسيرون على الجليد.",
+         "image": "exhausted sailors dragging sledges in a blizzard, vertical portrait"},
+        {"text": "وبعد أكثر من مئة وستين عاماً، وُجدت السفينتان في قاع البحر، محفوظتين بشكل مذهل!",
+         "image": "an old wooden shipwreck on the Arctic seabed with diver lights, vertical portrait"},
+        {"text": "القصة الكاملة على قناة الأرشيف المفقود.",
+         "image": "a frozen Arctic sea under the northern lights, vertical portrait"}
+      ]
+    }
+  ]
+}

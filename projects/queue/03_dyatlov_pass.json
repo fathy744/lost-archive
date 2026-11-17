@@ -1,0 +1,55 @@
+{
+  "slug": "dyatlov_pass",
+  "seed": 3303,
+  "title": "لغز ممر دياتلوف: لماذا هرب 9 متسلقين من خيمتهم حفاة في الثلج؟ 😱",
+  "description": "في فبراير 1959، قطع تسعة متسلقين خيمتهم من الداخل وهربوا في ظلام جبال الأورال، في درجة حرارة تحت الصفر بعشرات الدرجات... وبعضهم حافي القدمين! فما الذي أرعبهم إلى هذا الحد؟\n\n🔔 اشترك في الأرشيف المفقود وفعّل الجرس.\n💬 ما تفسيرك لما حدث في ممر دياتلوف؟\n\n#ممر_دياتلوف #وثائقي #غموض #ألغاز #قصص_حقيقية #الأرشيف_المفقود",
+  "tags": ["ممر دياتلوف", "حادثة دياتلوف", "جبال الأورال", "لغز", "وثائقي", "غموض", "قصص حقيقية", "الأرشيف المفقود", "Dyatlov Pass"],
+  "thumbnail": {
+    "image": "a torn tent half buried in snow on a dark frozen mountain slope at night, footprints leading away into the darkness, horror atmosphere",
+    "lines": ["هربوا حفاة في الثلج!", "ماذا رأوا؟"],
+    "arrow": [[380, 640], [560, 500]]
+  },
+  "scenes": [
+    {"text": "خيمة ممزقة من الداخل، فوق جبل متجمد. وآثار أقدام تبتعد عنها في الثلج، بعضها لأقدام حافية. في درجة حرارة تقترب من ثلاثين تحت الصفر. هذا ما وجده فريق البحث في فبراير عام ألف وتسعمئة وتسعة وخمسين.",
+     "image": "a torn tent half buried in snow on a frozen mountain slope, footprints in the snow leading away, grey dawn"},
+    {"text": "أهلاً بكم في الأرشيف المفقود. وملف اليوم، من أكثر الملفات رعباً في التاريخ الحديث: لغز ممر دياتلوف.",
+     "image": "an ancient dusty archive room full of old scrolls and leather books, single candle light, secret files"},
+    {"text": "في يناير من ذلك العام، انطلقت مجموعة من طلاب وخريجي معهد الأورال للتكنولوجيا في رحلة تزلج صعبة، بقيادة الشاب إيجور دياتلوف.",
+     "image": "a group of young Soviet skiers in 1950s winter clothing smiling in a snowy forest, vintage photo style"},
+    {"text": "كانوا عشرة. لكن أحدهم، يوري يودين، مرض في بداية الرحلة فعاد. ولم يكن يعلم أن هذا المرض سينقذ حياته.",
+     "image": "a lone young man on skis turning back through a snowy forest, waving goodbye to friends in the distance"},
+    {"text": "في ليلة الأول من فبراير، نصب التسعة خيمتهم على منحدر جبل يسميه السكان المحليون من شعب المانسي: الجبل الميت.",
+     "image": "a small tent pitched on a bare snowy mountain slope at dusk, cold wind, ominous dark sky"},
+    {"text": "وفي تلك الليلة، حدث شيء جعلهم يقطعون الخيمة بالسكاكين من الداخل، ويهربون في الظلام، دون معاطف كافية، ودون أحذية.",
+     "image": "the inside of a tent being slashed open with a knife from inside, dark night, panic, snow"},
+    {"text": "بعد أسابيع، عُثر على أول جثتين تحت شجرة أرز، على بعد أكثر من كيلومتر ونصف، وبجانبهما بقايا نار صغيرة. ثم وُجد ثلاثة آخرون، وكأنهم ماتوا وهم يحاولون العودة إلى الخيمة.",
+     "image": "a large lonely cedar tree in a snowy forest with remains of a small fire, search party in the distance"},
+    {"text": "أما الأربعة الأخيرون، فلم يُعثروا عليهم إلا بعد ذوبان الثلج في مايو، داخل وادٍ عميق. وكانت إصاباتهم صادمة: كسور شديدة في الجمجمة والصدر، دون جروح واضحة على الجلد.",
+     "image": "a deep snowy ravine in spring with melting snow, rescuers with ropes, dark and somber"},
+    {"text": "وأغلقت السلطات السوفيتية القضية بعبارة غامضة: قوة طبيعية قاهرة. فانطلقت النظريات: هجوم من شعب المانسي، تجارب عسكرية سرية، وحتى كائنات غامضة.",
+     "image": "a Soviet investigator's desk with classified files stamped secret, black and white photos, desk lamp"},
+    {"text": "وبعد ستين عاماً، أعادت النيابة الروسية فتح القضية عام ألفين وتسعة عشر، وخرجت بنتيجة: انهيار ثلجي.",
+     "image": "modern investigators in winter gear examining a mountain slope with measuring equipment, snow"},
+    {"text": "لكن كيف يحدث انهيار على منحدر خفيف؟ في عام ألفين وواحد وعشرين، نشر عالمان سويسريان دراسة تقول إن الحفر في الثلج لنصب الخيمة، مع رياح قوية، قد يسبب انهياراً صغيراً من لوح ثلجي، يضرب الخيمة وهم نائمون.",
+     "image": "a computer simulation of a snow slab avalanche hitting a tent on a mountain slope, scientific visualization"},
+    {"text": "هذا الانهيار قد يفسر الهروب المذعور، والإصابات القوية. لكن الكثيرين ما زالوا غير مقتنعين.",
+     "image": "a group of shadowy figures fleeing down a dark snowy slope at night away from a tent, panic"},
+    {"text": "فهل كان انهياراً ثلجياً؟ أم شيئاً آخر لم يُكشف بعد؟ اكتب نظريتك في التعليقات، ولا تنسَ الاشتراك في الأرشيف المفقود. لأن الملف القادم، أغرب.",
+     "image": "a frozen mountain under a starry night sky with a faint strange light on the horizon, mysterious ending"}
+  ],
+  "shorts": [
+    {
+      "title": "9 متسلقين قطعوا خيمتهم وهربوا حفاة في الثلج! 😱 #ممر_دياتلوف #وثائقي #غموض",
+      "scenes": [
+        {"text": "تسعة متسلقين قطعوا خيمتهم من الداخل، وهربوا حفاة في الثلج، في ثلاثين درجة تحت الصفر!",
+         "image": "a torn tent on a frozen mountain at night, footprints leading away, vertical portrait"},
+        {"text": "لم ينجُ أحد منهم. وبعضهم وُجد بكسور شديدة، دون أي جروح على الجلد.",
+         "image": "a snowy ravine with search party lanterns at dusk, vertical portrait"},
+        {"text": "السلطات السوفيتية أغلقت القضية بعبارة غامضة: قوة طبيعية قاهرة.",
+         "image": "a Soviet classified file stamped secret on a desk, vertical portrait"},
+        {"text": "فما الذي أرعبهم؟ القصة الكاملة على قناة الأرشيف المفقود.",
+         "image": "a dark frozen mountain under the stars with a strange glow, vertical portrait"}
+      ]
+    }
+  ]
+}

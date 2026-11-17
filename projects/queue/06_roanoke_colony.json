@@ -1,0 +1,53 @@
+{
+  "slug": "roanoke_colony",
+  "seed": 6606,
+  "title": "المستعمرة المفقودة: 115 شخصاً اختفوا وتركوا كلمة واحدة محفورة! 😱",
+  "description": "في عام 1590 عاد حاكم مستعمرة رونوك إلى أمريكا ليجد المكان خالياً تماماً... أكثر من مئة رجل وامرأة وطفل اختفوا، ولم يتركوا إلا كلمة واحدة محفورة على عمود خشبي: كرواتوان. فما الذي حدث لهم؟\n\n🔔 اشترك في الأرشيف المفقود وفعّل الجرس.\n💬 ما تفسيرك لاختفاء المستعمرين؟\n\n#رونوك #المستعمرة_المفقودة #وثائقي #غموض #ألغاز #الأرشيف_المفقود",
+  "tags": ["رونوك", "المستعمرة المفقودة", "كرواتوان", "اختفاء غامض", "وثائقي", "غموض", "ألغاز", "الأرشيف المفقود", "Roanoke"],
+  "thumbnail": {
+    "image": "an old wooden palisade post in a dark misty forest with the word CROATOAN carved into it, abandoned colonial settlement, eerie",
+    "lines": ["اختفوا جميعاً!", "وتركوا كلمة واحدة"],
+    "arrow": [[380, 640], [560, 480]]
+  },
+  "scenes": [
+    {"text": "في أغسطس عام ألف وخمسمئة وتسعين، عاد رجل إنجليزي إلى جزيرة على ساحل أمريكا، ليبحث عن عائلته، وعن أكثر من مئة شخص تركهم هناك. لكنه لم يجد أحداً. فقط كلمة واحدة، محفورة على عمود من الخشب.",
+     "image": "an Elizabethan man in 1590 clothing standing alone in an abandoned wooden fort in a misty forest, shocked"},
+    {"text": "أهلاً بكم في الأرشيف المفقود. وملف اليوم، عن أحد أقدم ألغاز الاختفاء في التاريخ: المستعمرة المفقودة.",
+     "image": "an ancient dusty archive room full of old scrolls and leather books, single candle light, secret files"},
+    {"text": "في عام ألف وخمسمئة وسبعة وثمانين، وصلت مجموعة من نحو مئة وخمسة عشر رجلاً وامرأة وطفلاً إلى جزيرة رونوك، لبناء واحدة من أولى المستوطنات الإنجليزية في أمريكا.",
+     "image": "16th century English ships arriving at a wild forested island coast, settlers in small boats, sunrise"},
+    {"text": "وكان قائدهم جون وايت. وبعد أسابيع من الوصول، وُلدت حفيدته فيرجينيا دير، أول طفلة إنجليزية تولد في القارة الجديدة.",
+     "image": "a colonial mother holding a newborn baby in a rough wooden cabin, candle light, warm and tender"},
+    {"text": "لكن المؤن كانت قليلة. فقرر جون وايت العودة إلى إنجلترا لجلب الإمدادات، ووعدهم بالرجوع خلال أشهر قليلة.",
+     "image": "a man waving goodbye from a departing sailing ship to settlers on a beach, cloudy sky"},
+    {"text": "لكنه وصل إلى إنجلترا في وقت عصيب. فقد اندلعت الحرب مع إسبانيا، وجاء الأسطول الإسباني الضخم المعروف بالأرمادا، فمُنعت السفن من الإبحار.",
+     "image": "a huge Spanish Armada fleet of galleons in battle on a stormy sea, cannon smoke, 1588"},
+    {"text": "مرت ثلاث سنوات كاملة. وعندما عاد أخيراً، وصل في يوم عيد ميلاد حفيدته الثالث. لكن المستعمرة كانت خالية تماماً.",
+     "image": "an empty overgrown colonial settlement in the forest, collapsed cabins, silence, fog"},
+    {"text": "لا جثث، ولا آثار معركة. البيوت فُككت، وكأن السكان رحلوا بهدوء. وعلى عمود في السور، وجد كلمة محفورة: كرواتوان. وعلى شجرة قريبة، ثلاثة حروف فقط: سي، آر، أو.",
+     "image": "close up of the word CROATOAN carved into an old wooden post, moss, dramatic light"},
+    {"text": "وكان قد اتفق معهم قبل رحيله، إن اضطروا للمغادرة، أن يحفروا اسم المكان الذي ذهبوا إليه. وإن كانوا في خطر، يرسمون صليباً فوقه. ولم يكن هناك صليب.",
+     "image": "a hand carving letters into a tree trunk with a knife, forest, tension"},
+    {"text": "وكرواتوان كان اسم جزيرة قريبة، يعيش فيها شعب من السكان الأصليين كانوا أصدقاء للمستعمرين. لكن عاصفة قوية منعت جون وايت من الذهاب إليها. وعاد إلى إنجلترا، ولم يرَ عائلته مرة أخرى.",
+     "image": "a ship struggling in a violent storm near a barrier island coast, lightning, dramatic"},
+    {"text": "اليوم، يرى كثير من الباحثين أن المستعمرين ربما اندمجوا مع السكان الأصليين. وقد عثر علماء الآثار على قطع أوروبية في جزيرة هاتيراس، التي كانت تُعرف بكرواتوان. لكن لا يوجد دليل حاسم حتى الآن.",
+     "image": "archaeologists brushing soil off old European artifacts at a dig site on a sandy island, sunny"},
+    {"text": "مئة وخمسة عشر شخصاً اختفوا، وتركوا وراءهم كلمة واحدة. برأيك، أين ذهبوا؟ اكتب نظريتك في التعليقات، ولا تنسَ الاشتراك في الأرشيف المفقود. لأن الملف القادم، أغرب.",
+     "image": "a misty forest path disappearing into fog with a carved wooden post, mysterious ending"}
+  ],
+  "shorts": [
+    {
+      "title": "115 شخصاً اختفوا وتركوا كلمة واحدة محفورة! 😱 #رونوك #وثائقي #غموض",
+      "scenes": [
+        {"text": "أكثر من مئة رجل وامرأة وطفل، اختفوا تماماً، ولم يتركوا إلا كلمة واحدة محفورة على الخشب!",
+         "image": "the word CROATOAN carved on a wooden post in a misty forest, vertical portrait"},
+        {"text": "عاد قائدهم بعد ثلاث سنوات، فوجد المستعمرة خالية. لا جثث، ولا آثار معركة.",
+         "image": "an empty abandoned colonial fort in a foggy forest, vertical portrait"},
+        {"text": "وكان قد اتفق معهم: إن كانوا في خطر، يرسمون صليباً. ولم يكن هناك صليب.",
+         "image": "a hand carving letters on a tree trunk with a knife, vertical portrait"},
+        {"text": "فأين ذهبوا؟ القصة الكاملة على قناة الأرشيف المفقود.",
+         "image": "a misty forest path disappearing into fog, vertical portrait"}
+      ]
+    }
+  ]
+}

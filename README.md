@@ -54,3 +54,11 @@ python publish.py output/alexander_tomb --youtube --schedule 2026-11-20T18:00:00
 ```
 
 ⚠️ اقفل المجلد `credentials/` ومتشاركهوش مع حد، ومترفعهوش على GitHub.
+
+## التشغيل اليومي (GitHub Actions)
+- كل يوم **الساعة 11:00 UTC** (1 الضهر بتوقيت القاهرة في الشتا)، الملف `.github/workflows/daily.yml` بياخد أول سكريبت من `projects/queue/`، ويعمل الفيديو، ويرفعه على يوتيوب.
+- الفيديو الطويل بيتجدول ينزل **Public الساعة 7:00 مساءً** بتوقيت القاهرة، والشورت **الساعة 10:00 مساءً**.
+- بعد النشر، السكريبت بيتنقل لـ `projects/done/` ومعاه لينكات الفيديوهات، وآخر نتيجة بتتكتب في `last_run.txt`.
+- **بيانات يوتيوب:** محفوظة في GitHub Secret اسمه `YT_CREDENTIALS`.
+- **لما الطابور يفضى:** اطلب من Claude يكتب مواضيع جديدة في `projects/queue/`.
+- **تشغيل يدوي:** من تبويب Actions، اختار daily-video، ودوس Run workflow.

@@ -1,8 +1,58 @@
 name: daily-video
+
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 11 * * *"   # 11:00 UTC = 1-2 الضهر في القاهرة، فيه وقت كفاية قبل 7 بالليل
+  workflow_dispatch:        # زرار "Run workflow" للتشغيل اليدوي
+
+permissions:
+  contents: write
+
+concurrency: daily-video
+
 jobs:
-  noop:
+  make-and-publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
-      - run: echo ok
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: System packages
+        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-noto-core
+
+      - name: Python packages
+        run: pip install -r requirements.txt
+
+      - name: YouTube credentials
+        env:
+          YT_CREDENTIALS: ${{ secrets.YT_CREDENTIALS }}
+        run: |
+          mkdir -p credentials
+          echo "$YT_CREDENTIALS" | base64 -d > /tmp/creds.json
+          python -c "import json; d=json.load(open('/tmp/creds.json')); json.dump(d['client_secret'], open('credentials/client_secret.json','w')); json.dump(d['token'], open('credentials/youtube_token.json','w'))"
+          rm /tmp/creds.json
+
+      - name: Make video and schedule on YouTube
+        run: python daily.py
+
+      - name: Save progress
+        if: always()
+        run: |
+          git config user.name "lost-archive-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A projects
+          if [ -f last_run.txt ]; then git add last_run.txt; fi
+          git diff --cached --quiet || (git commit -m "Daily video: $(date -u +%F)" && git push)
+
+      - name: Keep the video files for 7 days
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos
+          path: output/
+          retention-days: 7
+          if-no-files-found: ignore

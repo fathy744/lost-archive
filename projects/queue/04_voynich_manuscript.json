@@ -1,0 +1,53 @@
+{
+  "slug": "voynich_manuscript",
+  "seed": 4404,
+  "title": "مخطوطة فوينيتش: الكتاب الذي لم يستطع أحد قراءته منذ 600 عام! 😱",
+  "description": "كتاب عمره نحو 600 عام، مكتوب بلغة لا يعرفها أحد، ومليء برسوم نباتات لا توجد على الأرض! فشل في فك شفرته أعظم محللي الشفرات في التاريخ. فما سر مخطوطة فوينيتش؟\n\n🔔 اشترك في الأرشيف المفقود وفعّل الجرس.\n💬 برأيك: لغة مفقودة أم شفرة أم خدعة؟\n\n#مخطوطة_فوينيتش #وثائقي #غموض #ألغاز #شفرات #الأرشيف_المفقود",
+  "tags": ["مخطوطة فوينيتش", "كتاب غامض", "شفرة", "لغز", "وثائقي", "غموض", "ألغاز", "الأرشيف المفقود", "Voynich manuscript"],
+  "thumbnail": {
+    "image": "an ancient open manuscript with strange unknown script and drawings of bizarre unknown plants, candle light, magnifying glass, mysterious",
+    "lines": ["لا أحد يستطيع قراءته!", "عمره 600 عام"],
+    "arrow": [[380, 640], [560, 500]]
+  },
+  "scenes": [
+    {"text": "هناك كتاب محفوظ اليوم في جامعة ييل الأمريكية، عمره نحو ستمئة عام. صفحاته مليئة بكلمات مكتوبة بخط أنيق. لكن المشكلة، أنه لا يوجد إنسان واحد على وجه الأرض يستطيع قراءتها.",
+     "image": "an ancient manuscript on a stand in a modern rare books library, glass and marble, dramatic light"},
+    {"text": "أهلاً بكم في الأرشيف المفقود. وملف اليوم، عن أغرب كتاب في التاريخ: مخطوطة فوينيتش.",
+     "image": "an ancient dusty archive room full of old scrolls and leather books, single candle light, secret files"},
+    {"text": "في عام ألف وتسعمئة واثني عشر، اشترى تاجر كتب نادرة اسمه ويلفريد فوينيتش مجموعة من المخطوطات القديمة في إيطاليا. وبينها، كان هذا الكتاب الغريب.",
+     "image": "a book dealer in 1912 examining old manuscripts in an Italian villa library, dust, warm light"},
+    {"text": "يتكون الكتاب من نحو مئتين وأربعين صفحة. مكتوبة بأبجدية لا تشبه أي لغة معروفة. لا عربية، ولا لاتينية، ولا أي لغة أخرى.",
+     "image": "close up of pages filled with strange unknown flowing script and symbols, old vellum texture"},
+    {"text": "والأغرب هي الرسوم. نباتات لم يتعرف عليها علماء النبات، وخرائط فلكية لنجوم وأبراج، ونساء يستحممن في أحواض متصلة بأنابيب غريبة.",
+     "image": "medieval style illustrations of bizarre unknown plants with strange roots, astronomical circles and stars, colorful inks"},
+    {"text": "في البداية، ظن كثيرون أنه خدعة حديثة. لكن في عام ألفين وتسعة، فحص العلماء الرق الذي كُتب عليه بالكربون المشع. والنتيجة: صُنع بين عامي ألف وأربعمئة وأربعة، وألف وأربعمئة وثمانية وثلاثين.",
+     "image": "scientists in a laboratory analyzing a sample of ancient parchment with modern equipment, blue light"},
+    {"text": "ورسالة قديمة وجدت مع الكتاب، تقول إن إمبراطوراً أوروبياً اشتراه في القرن السادس عشر، بمبلغ ضخم من الدوقات الذهبية.",
+     "image": "a Renaissance emperor in rich robes holding an old book in a palace full of curiosities, golden coins on a table"},
+    {"text": "في القرن العشرين، حاول أعظم محللي الشفرات فك اللغز. ومنهم ويليام فريدمان، الذي ساعد في كسر شفرات عسكرية في الحرب العالمية الثانية. لكنه فشل.",
+     "image": "a 1940s codebreaker team working at desks with papers and cipher machines, smoke, dim office"},
+    {"text": "والمثير أن تحليل الكلمات يظهر أنماطاً تشبه اللغات الحقيقية. كلمات تتكرر بنظام، وكأن هناك معنى حقيقياً مخفياً.",
+     "image": "a computer screen showing linguistic analysis graphs of strange symbols, dark room, glowing"},
+    {"text": "فهل هو لغة طبيعية مفقودة؟ أم شفرة عبقرية؟ أم مجرد خدعة متقنة صنعها شخص ذكي ليبيعها بثمن كبير؟",
+     "image": "three glowing question marks over an ancient open manuscript, candles, mystery"},
+    {"text": "ظهرت عشرات المحاولات التي ادعت فك الشفرة، بعضها بالذكاء الاصطناعي. لكن حتى اليوم، لم يقبل المتخصصون أي حل منها.",
+     "image": "artificial intelligence neural network glowing lines over an ancient manuscript page, futuristic meets ancient"},
+    {"text": "ستمئة عام، وما زال هذا الكتاب يحتفظ بسره. برأيك، ماذا يحتوي؟ اكتب رأيك في التعليقات، ولا تنسَ الاشتراك في الأرشيف المفقود. لأن الملف القادم، أغرب.",
+     "image": "an ancient manuscript slowly closing in darkness with a single candle, mysterious ending"}
+  ],
+  "shorts": [
+    {
+      "title": "كتاب عمره 600 عام لا يستطيع أحد قراءته! 😱 #مخطوطة_فوينيتش #وثائقي #غموض",
+      "scenes": [
+        {"text": "هذا الكتاب عمره ستمئة عام، ولا يوجد إنسان واحد على الأرض يستطيع قراءته!",
+         "image": "an ancient manuscript with unknown script and candle light, vertical portrait"},
+        {"text": "مكتوب بلغة مجهولة، ومليء برسوم نباتات لا توجد في الطبيعة.",
+         "image": "medieval illustration of a bizarre unknown plant with strange roots, vertical portrait"},
+        {"text": "حتى أعظم محللي الشفرات في الحرب العالمية الثانية، فشلوا في فهمه.",
+         "image": "a 1940s codebreaker at a desk with papers and cipher machine, vertical portrait"},
+        {"text": "هذه مخطوطة فوينيتش. القصة الكاملة على قناة الأرشيف المفقود.",
+         "image": "an old manuscript closing in darkness, vertical portrait"}
+      ]
+    }
+  ]
+}
