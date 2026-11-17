@@ -1,0 +1,119 @@
+{
+  "slug": "mary_celeste",
+  "seed": 2202,
+  "title": "سفينة الأشباح: أين اختفى طاقم ماري سيليست؟ لغز المحيط الأطلسي 😱",
+  "description": "في ديسمبر 1872 عُثر على سفينة تبحر وحدها في المحيط الأطلسي... لا قبطان، لا بحارة، لا أحد! الطعام موجود، والحمولة سليمة تقريباً، وقارب النجاة مفقود. فماذا حدث على متن ماري سيليست؟\n\n🔔 اشترك في الأرشيف المفقود وفعّل الجرس.\n💬 ما تفسيرك لاختفاء الطاقم؟\n\n#ماري_سيليست #سفينة_الأشباح #وثائقي #غموض #ألغاز #الأرشيف_المفقود",
+  "tags": [
+    "ماري سيليست",
+    "سفينة الأشباح",
+    "لغز البحر",
+    "المحيط الأطلسي",
+    "وثائقي",
+    "غموض",
+    "ألغاز",
+    "الأرشيف المفقود",
+    "Mary Celeste"
+  ],
+  "thumbnail": {
+    "image": "an old 19th century sailing ship drifting alone on a stormy grey ocean, torn sails, empty deck, fog, ghost ship",
+    "lines": [
+      "الطاقم اختفى!",
+      "سفينة بلا بشر"
+    ],
+    "arrow": [
+      [
+        380,
+        620
+      ],
+      [
+        560,
+        470
+      ]
+    ]
+  },
+  "scenes": [
+    {
+      "text": "في الرابع من ديسمبر عام ألف وثمانمئة واثنين وسبعين، شاهد بحارة سفينة تتمايل وحدها وسط المحيط الأطلسي. أشرعتها ممزقة، ولا أحد يرد على النداء. وعندما صعدوا إليها، لم يجدوا إنساناً واحداً.",
+      "image": "a 19th century sailing ship drifting alone in the Atlantic ocean, torn sails, grey sky, mysterious"
+    },
+    {
+      "text": "أهلاً بكم في الأرشيف المفقود. وملف اليوم، عن أشهر سفينة أشباح في التاريخ: ماري سيليست.",
+      "image": "an ancient dusty archive room full of old scrolls and leather books, single candle light, secret files"
+    },
+    {
+      "text": "أبحرت ماري سيليست من نيويورك في نوفمبر، متجهة إلى إيطاليا. وعلى متنها عشرة أشخاص: القبطان بنجامين بريجز، وزوجته، وابنته الصغيرة ذات العامين، وسبعة بحارة.",
+      "image": "New York harbor in 1872, a sailing ship being loaded with wooden barrels, a captain with his wife and little daughter on deck"
+    },
+    {
+      "text": "وكانت حمولتها أكثر من ألف وسبعمئة برميل من الكحول الصناعي.",
+      "image": "hundreds of wooden barrels stacked in the dark cargo hold of an old ship, lantern light"
+    },
+    {
+      "text": "بعد شهر تقريباً، وجدتها سفينة أخرى اسمها ديي غراتسيا بين جزر الأزور والبرتغال. صعد البحار أوليفر ديفو إلى السطح، فوجد مشهداً لن ينساه أبداً.",
+      "image": "sailors rowing a small boat towards an abandoned sailing ship on rough sea, dramatic clouds"
+    },
+    {
+      "text": "السفينة سليمة، ومخزون الطعام والماء يكفي ستة أشهر، وأمتعة الطاقم في مكانها. لكن قارب النجاة الوحيد، كان مفقوداً.",
+      "image": "inside an empty captain's cabin of an old ship, personal belongings, a map on the table, eerie silence"
+    },
+    {
+      "text": "آخر سطر في سجل السفينة كُتب قبل عشرة أيام، قرب جزر الأزور. ولم يكن فيه أي شيء غير عادي.",
+      "image": "close up of an old ship logbook with handwritten entries, quill pen, candle light"
+    },
+    {
+      "text": "فلماذا يترك قبطان خبير سفينة سليمة، ويركب مع زوجته وطفلته قارباً صغيراً وسط المحيط؟",
+      "image": "a tiny wooden lifeboat with people on a vast dark stormy ocean, lonely and dramatic"
+    },
+    {
+      "text": "بعد سنوات، نشر كاتب شاب اسمه آرثر كونان دويل، مؤلف شيرلوك هولمز، قصة خيالية عن السفينة. فانتشرت أساطير كثيرة، مثل أن الطعام كان لا يزال دافئاً على الطاولة. وهذا لم يحدث أبداً.",
+      "image": "a Victorian writer with a mustache writing at a desk by gaslight, papers and books, 1880s"
+    },
+    {
+      "text": "لكن هناك تفاصيل حقيقية مثيرة. عندما وصلت الحمولة، وُجد أن تسعة براميل كانت فارغة. براميل مصنوعة من خشب يمكن أن يتسرب منه الكحول.",
+      "image": "empty wooden barrels in a dark ship hold, vapors rising in a lantern beam, tension"
+    },
+    {
+      "text": "ويعتقد كثير من الباحثين أن القبطان شمّ رائحة أبخرة الكحول القوية، أو لاحظ ماءً في السفينة، فخشي أن تنفجر أو تغرق. فأمر الجميع بالنزول إلى قارب النجاة، مؤقتاً.",
+      "image": "a ship captain shouting orders on deck at night, crew rushing to lower a lifeboat, wind and waves"
+    },
+    {
+      "text": "ربما كان القارب مربوطاً بالسفينة بحبل. ثم هبت الرياح، فانقطع الحبل، وابتعدت السفينة. لتترك عشرة أشخاص وحدهم في قلب المحيط.",
+      "image": "a broken rope trailing in the water as a sailing ship drifts away from a tiny lifeboat, dramatic sea"
+    },
+    {
+      "text": "لكن هذه تبقى مجرد نظرية. فلم يُعثر أبداً على القارب، ولا على أي فرد من الطاقم. برأيك، ماذا حدث على متن ماري سيليست؟ اكتب نظريتك في التعليقات، واشترك في الأرشيف المفقود.",
+      "image": "a ghost ship silhouette disappearing into thick fog at sea, mysterious ending"
+    }
+  ],
+  "shorts": [
+    {
+      "title": "سفينة وُجدت في المحيط بدون أي إنسان! 😱 #ماري_سيليست #وثائقي #غموض",
+      "scenes": [
+        {
+          "text": "سفينة وُجدت تبحر وحدها في المحيط الأطلسي، ولا يوجد على متنها إنسان واحد!",
+          "image": "a ghost sailing ship drifting in fog on a grey ocean, vertical portrait"
+        },
+        {
+          "text": "الطعام يكفي ستة أشهر، والأمتعة في مكانها، لكن القبطان وزوجته وطفلته والبحارة، اختفوا تماماً.",
+          "image": "an empty captain's cabin with belongings and a map, lantern light, vertical portrait"
+        },
+        {
+          "text": "الشيء الوحيد المفقود، كان قارب النجاة. ولم يُعثر على أحد منهم أبداً.",
+          "image": "a tiny lifeboat alone on a dark stormy ocean, vertical portrait"
+        },
+        {
+          "text": "هذا لغز ماري سيليست. القصة الكاملة على قناة الأرشيف المفقود.",
+          "image": "an old ship logbook on a wooden table by candlelight, vertical portrait"
+        }
+      ]
+    }
+  ],
+  "published": {
+    "long_at": "2026-11-18T19:00:00+02:00",
+    "short_at": "2026-11-18T22:00:00+02:00",
+    "youtube": {
+      "long": "https://youtu.be/juuT8z7E_a0",
+      "short_1": "https://youtu.be/ColzNLHeWXY"
+    }
+  }
+}
