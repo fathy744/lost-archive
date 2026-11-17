@@ -1,0 +1,6 @@
+credentials/
+output/
+work/
+run.log
+test/
+__pycache__/
