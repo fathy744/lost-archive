@@ -25,6 +25,19 @@ def slot(hour_min, now):
     return t
 
 
+def next_free_slot(now):
+    """أول يوم فاضي: علشان لو اشتغل أكتر من مرة في نفس اليوم، الفيديوهات متنزلش مع بعض."""
+    t = slot(LONG_AT, now)
+    taken = set()
+    for f in DONE.glob("*.json"):
+        at = json.loads(f.read_text(encoding="utf-8")).get("published", {}).get("long_at")
+        if at:
+            taken.add(datetime.fromisoformat(at).astimezone(CAIRO).date())
+    while t.date() in taken:
+        t += timedelta(days=1)
+    return t
+
+
 def main():
     queue = sorted(QUEUE.glob("*.json"))
     if not queue:
@@ -37,7 +50,7 @@ def main():
     out = ROOT / "output" / p["slug"]
     meta = json.loads((out / "meta.json").read_text(encoding="utf-8"))
     now = datetime.now(CAIRO)
-    long_at = slot(LONG_AT, now)
+    long_at = next_free_slot(now)
     short_at = long_at.replace(hour=SHORT_AT[0], minute=SHORT_AT[1])
 
     yt = publish.yt_client()
