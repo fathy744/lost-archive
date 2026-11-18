@@ -2,7 +2,8 @@
 
   - الفيديو الطويل: Public الساعة 7:00 مساءً بتوقيت القاهرة
   - الشورت:        Public الساعة 10:00 مساءً بتوقيت القاهرة
-  - 3 شورتس معلومات من projects/facts_queue.json: الساعة 11:00 ص، 3:00 م، 5:00 م
+  - 3 شورتس معلومات من projects/facts_queue.json: الساعة 3:00 م، 5:00 م، 9:00 م (في نفس يوم التشغيل،
+    ولو ميعاد فات بيتنقل لأول ميعاد فاضي بعده)
 بعد النشر المشروع بيتنقل لـ projects/done ومعاه لينكات الفيديوهات.
 حصة يوتيوب اليومية ~10,000 وحدة، والرفعة الواحدة ~1,600، فالمجموع اليومي (5 رفعات) جوه الحد.
 """
@@ -18,7 +19,8 @@ ROOT = Path(__file__).resolve().parent
 QUEUE, DONE = ROOT / "projects" / "queue", ROOT / "projects" / "done"
 CAIRO = ZoneInfo("Africa/Cairo")
 LONG_AT, SHORT_AT = (19, 0), (22, 0)
-FACT_TIMES = [(11, 0), (15, 0), (17, 0)]   # مواعيد شورتس المعلومات (عددها = عدد الشورتس في اليوم)
+FACT_TIMES = [(15, 0), (17, 0), (21, 0)]   # مواعيد شورتس المعلومات (عددها = عدد الشورتس في اليوم)
+FACTS_PER_RUN = 3                            # حد الرفع في التشغيل الواحد (حصة يوتيوب)
 FACTS_QUEUE, FACTS_DONE = ROOT / "projects" / "facts_queue.json", ROOT / "projects" / "facts_done.json"
 
 
@@ -50,17 +52,27 @@ def save(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def post_facts(yt, day):
-    """يعمل ويرفع شورتس المعلومات اليومية، كل واحد في ميعاده."""
+def post_facts(yt, now):
+    """يعمل ويرفع شورتس المعلومات في أقرب المواعيد الفاضية (من النهارده)."""
     queue, done = load(FACTS_QUEUE, []), load(FACTS_DONE, [])
-    used = {}
+    per_day = {}
     for d in done:
         dd = datetime.fromisoformat(d["published_at"]).astimezone(CAIRO).date()
-        used[dd] = used.get(dd, 0) + 1
-    while used.get(day, 0) >= len(FACT_TIMES):  # اليوم ده خد حصته
+        per_day[dd] = per_day.get(dd, 0) + 1
+    uploaded_today = sum(1 for d in done if d.get("uploaded_on") == now.date().isoformat())
+    if uploaded_today >= FACTS_PER_RUN:  # حصة النهارده من الرفع خلصت، نكمّل بكرة
+        return f"  ✔ شورتس المعلومات اترفعت النهارده خلاص — فاضل في الطابور: {len(queue)}"
+    slots, day = [], now.date()
+    while len(slots) < FACTS_PER_RUN - uploaded_today and day <= now.date() + timedelta(days=1):  # النهارده وبكرة بس
+        free = len(FACT_TIMES) - per_day.get(day, 0)
+        for hm in FACT_TIMES:
+            at = datetime.combine(day, datetime.min.time(), CAIRO).replace(hour=hm[0], minute=hm[1])
+            if free > 0 and at - now >= timedelta(minutes=45) and len(slots) < FACTS_PER_RUN - uploaded_today:
+                slots.append(at)
+                free -= 1
         day += timedelta(days=1)
     lines = []
-    for hm in FACT_TIMES[used.get(day, 0):]:
+    for at in slots:
         if not queue:
             lines.append("  ⚠ طابور شورتس المعلومات فاضي")
             break
@@ -69,14 +81,14 @@ def post_facts(yt, day):
         out = ROOT / "output" / "facts" / f"{f['slug']}.mp4"
         out.parent.mkdir(parents=True, exist_ok=True)
         pipeline.build_video(f["scenes"], ROOT / "work" / "facts" / f["slug"], out, True, f.get("seed", 9000))
-        at = datetime.combine(day, datetime.min.time(), CAIRO).replace(hour=hm[0], minute=hm[1])
         try:
             vid = publish.youtube_upload(yt, out, f["title"], f["description"], f["tags"] + ["shorts"],
                                          at.isoformat(), False)
-        except Exception as e:  # غالباً حصة يوتيوب خلصت: نكمّل بكرة
+        except Exception as e:  # غالباً حصة يوتيوب خلصت: نكمّل التشغيل الجاي
             lines.append(f"  ⚠ وقف رفع الشورتس: {str(e)[:200]}")
             break
         f["published_at"], f["youtube"] = at.isoformat(), f"https://youtu.be/{vid}"
+        f["uploaded_on"] = now.date().isoformat()
         done.append(f)
         queue.pop(0)
         save(FACTS_QUEUE, queue)
@@ -90,14 +102,15 @@ def main():
     queue = sorted(QUEUE.glob("*.json"))
     yt = publish.yt_client()
     if not queue:
-        day = (datetime.now(CAIRO) + timedelta(days=1)).date()
-        report = "❌ طابور الفيديوهات الطويلة فاضي: اطلب من Claude يكتب مواضيع جديدة.\n" + post_facts(yt, day)
+        report = "❌ طابور الفيديوهات الطويلة فاضي: اطلب من Claude يكتب مواضيع جديدة.\n" + post_facts(yt, datetime.now(CAIRO))
         print(report)
         (ROOT / "last_run.txt").write_text(report + "\n", encoding="utf-8")
         sys.exit(1)
     now = datetime.now(CAIRO)
     if next_free_slot(now).date() > now.date() + timedelta(days=1):
-        print("✔ فيديو بكرة متجدول خلاص، مفيش حاجة تتعمل في التشغيل ده.")
+        report = "✔ فيديو بكرة متجدول خلاص.\n" + post_facts(yt, now)
+        print(report)
+        (ROOT / "last_run.txt").write_text(report + "\n", encoding="utf-8")
         return
     proj = queue[0]
     print(f"▶ المشروع: {proj.name} — فاضل في الطابور بعده: {len(queue) - 1}")
@@ -123,7 +136,7 @@ def main():
     proj.unlink()
     summary = f"✔ {p['title']}\n  ينزل {long_at:%Y-%m-%d %H:%M} القاهرة\n" + \
               "\n".join(f"  {k}: {v}" for k, v in p["published"]["youtube"].items())
-    summary += f"\n  فاضل في الطابور: {len(queue) - 1}\n" + post_facts(yt, long_at.date())
+    summary += f"\n  فاضل في الطابور: {len(queue) - 1}\n" + post_facts(yt, datetime.now(CAIRO))
     print(summary)
     Path(ROOT / "last_run.txt").write_text(summary + "\n", encoding="utf-8")
 
