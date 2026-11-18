@@ -60,7 +60,7 @@ async def _tts(text, out_mp3):
 
 
 def tts(text, out_mp3):
-    for attempt in range(4):
+    for attempt in range(7):
         try:
             return asyncio.run(_tts(text, out_mp3))
         except Exception as e:  # الشبكة أحياناً بتقطع
