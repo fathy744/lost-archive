@@ -95,6 +95,10 @@ def main():
         print(report)
         (ROOT / "last_run.txt").write_text(report + "\n", encoding="utf-8")
         sys.exit(1)
+    now = datetime.now(CAIRO)
+    if next_free_slot(now).date() > now.date() + timedelta(days=1):
+        print("✔ فيديو بكرة متجدول خلاص، مفيش حاجة تتعمل في التشغيل ده.")
+        return
     proj = queue[0]
     print(f"▶ المشروع: {proj.name} — فاضل في الطابور بعده: {len(queue) - 1}")
     pipeline.main(proj)
