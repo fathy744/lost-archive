@@ -70,22 +70,26 @@ def tts(text, out_mp3):
 
 
 # ---------------------------------------------------------------- الصور
-def gen_image(prompt, out, w, h, seed):
+def gen_image(prompt, out, w, h, seed, attempts=9):
+    """يولّد صورة من Pollinations. بيرجع True لو نجح، False لو الخدمة رفضت بعد كل المحاولات."""
     if out.exists() and out.stat().st_size > 10000:
-        return
+        return True
     q = urllib.parse.quote(f"{prompt}, {IMG_STYLE}")
     url = f"https://image.pollinations.ai/prompt/{q}?width={w}&height={h}&seed={seed}&nologo=true"
-    for attempt in range(6):
+    headers = {"User-Agent": "lost-archive-video-bot"}
+    if os.environ.get("POLLINATIONS_TOKEN"):  # اختياري: توكن مجاني من auth.pollinations.ai بيدي أولوية أعلى
+        headers["Authorization"] = "Bearer " + os.environ["POLLINATIONS_TOKEN"]
+    for attempt in range(attempts):
         try:
-            with urllib.request.urlopen(url, timeout=180) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=180) as r:
                 data = r.read()
             if len(data) > 10000:
                 out.write_bytes(data)
-                return
+                return True
         except Exception as e:
             print("  image retry", attempt + 1, e)
-        time.sleep(5 * (attempt + 1))
-    raise RuntimeError("image generation failed: " + prompt)
+        time.sleep(min(8 * (attempt + 1), 60))
+    return False
 
 
 # ---------------------------------------------------------------- الترجمة
@@ -190,9 +194,19 @@ def build_video(scenes, workdir, out, vertical, seed_base):
     workdir.mkdir(parents=True, exist_ok=True)
     W, H = (576, 1024) if vertical else (1024, 576)
     clips, subs, t = [], [], 0.0
+    imgs = [workdir / f"img_{i:02d}.jpg" for i in range(len(scenes))]
+    ok = [gen_image(sc["image"], imgs[i], W, H, seed_base + i) for i, sc in enumerate(scenes)]
+    good = [i for i, k in enumerate(ok) if k]
+    if not good:
+        raise RuntimeError("خدمة الصور رفضت كل الطلبات")
+    for i, k in enumerate(ok):
+        if not k:  # خد أقرب صورة نجحت بدل ما الفيديو يقف
+            j = min(good, key=lambda g: abs(g - i))
+            print(f"  ⚠ صورة المشهد {i+1} فشلت، هستخدم صورة المشهد {j+1}")
+            shutil.copy(imgs[j], imgs[i])
     for i, sc in enumerate(scenes):
         print(f"  مشهد {i+1}/{len(scenes)}")
-        img = workdir / f"img_{i:02d}.jpg"
+        img = imgs[i]
         aud = workdir / f"voice_{i:02d}.mp3"
         clip = workdir / f"clip_{i:02d}.mp4"
         cache = workdir / f"scene_{i:02d}.json"
@@ -200,7 +214,6 @@ def build_video(scenes, workdir, out, vertical, seed_base):
             c = json.loads(cache.read_text(encoding="utf-8"))  # المشهد معمول قبل كده
             sents, dur = c["sents"], c["dur"]
         else:
-            gen_image(sc["image"], img, W, H, seed_base + i)
             sents = tts(sc["text"], aud)
             dur = duration(aud) + 0.45
             render_scene(img, aud, clip, dur, MOTIONS[i % len(MOTIONS)], vertical)
@@ -237,7 +250,10 @@ def build_video(scenes, workdir, out, vertical, seed_base):
 def thumbnail(cfg, workdir, out, seed):
     W, H = 1280, 720
     base = workdir / "thumb_bg.jpg"
-    gen_image(cfg["image"], base, W, H, seed)
+    if not gen_image(cfg["image"], base, W, H, seed):
+        fallback = workdir / "long" / "img_00.jpg"  # صورة أول مشهد في الفيديو
+        print("  ⚠ صورة الـ Thumbnail فشلت، هستخدم صورة من الفيديو")
+        shutil.copy(fallback, base)
     im = Image.open(base).convert("RGB")
     im = im.crop((0, 0, im.width, int(im.height * 0.93))).resize((W, H), Image.LANCZOS)  # شيل العلامة
     # تغميق جهة النص (اليمين) علشان الكلام يبان
@@ -284,11 +300,11 @@ def main(project_path):
     seed = p.get("seed", random.randint(1, 10**6))
     t0 = time.time()
 
-    print("▶ الصورة المصغرة")
-    thumbnail(p["thumbnail"], work, out / "thumbnail.jpg", seed + 999)
-
     print("▶ الفيديو الطويل")
     dur = build_video(p["scenes"], work / "long", out / "long.mp4", False, seed)
+
+    print("▶ الصورة المصغرة")
+    thumbnail(p["thumbnail"], work, out / "thumbnail.jpg", seed + 999)
 
     for k, short in enumerate(p.get("shorts", []), 1):
         print(f"▶ شورت {k}")
