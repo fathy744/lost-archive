@@ -131,6 +131,7 @@ def make_long(yt, proj):
     p = json.loads(proj.read_text(encoding="utf-8"))
     out = ROOT / "output" / p["slug"]
     meta = json.loads((out / "meta.json").read_text(encoding="utf-8"))
+    yt = publish.yt_client()  # اتصال جديد: القديم بيقفل بعد نص ساعة من بناء الفيديو
     long_at = next_free_slot(datetime.now(CAIRO))
     short_at = long_at.replace(hour=SHORT_AT[0], minute=SHORT_AT[1])
     ids = {"long": publish.youtube_upload(yt, out / "long.mp4", meta["title"], meta["description"], meta["tags"],

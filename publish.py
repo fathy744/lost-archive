@@ -50,11 +50,20 @@ def youtube_upload(yt, video, title, desc, tags, schedule=None, public=False, th
     body = {"snippet": {"title": title[:100], "description": desc[:5000], "tags": tags,
                         "categoryId": "27", "defaultLanguage": "ar", "defaultAudioLanguage": "ar"},
             "status": status}
-    req = yt.videos().insert(part="snippet,status", body=body,
-                             media_body=MediaFileUpload(str(video), chunksize=8 * 1024 * 1024, resumable=True))
-    resp = None
+    for attempt in range(4):
+        req = yt.videos().insert(part="snippet,status", body=body,
+                                 media_body=MediaFileUpload(str(video), chunksize=8 * 1024 * 1024, resumable=True))
+        try:
+            st, resp = req.next_chunk(num_retries=5)  # أول طلب: لو الاتصال قديم ومقطوع، نعيد باتصال جديد
+            break
+        except (OSError, ConnectionError) as e:
+            if attempt == 3:
+                raise
+            print(f"  ⚠ الاتصال بيوتيوب اتقطع ({e})، بحاول تاني")
+            time.sleep(10 * (attempt + 1))
+            yt = yt_client()
     while resp is None:
-        st, resp = req.next_chunk()
+        st, resp = req.next_chunk(num_retries=5)
         if st:
             print(f"  يوتيوب {int(st.progress()*100)}%")
     vid = resp["id"]
